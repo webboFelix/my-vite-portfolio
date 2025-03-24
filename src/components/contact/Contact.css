@@ -1,0 +1,140 @@
+.contact_container {
+  width: 58%;
+  display: grid;
+  grid-template-columns: 30% 58%;
+  gap: 12%;
+  background: url("/bg.jpg") no-repeat;
+  background-size: cover;
+  padding: 2%;
+  background-position: center;
+  animation: animateBg 5s linear infinite;
+}
+
+@keyframes animateBg {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.contact_options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.contact_option {
+  padding: 1.2rem;
+  border-radius: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  border: 1px solid transparent;
+  transition: 0.3s;
+
+  &:hover {
+    background: transparent;
+    border-color: lightskyblue;
+    box-shadow: 4px 20px 6px 5px rgb(165, 153, 153);
+    transform: scale3d(5);
+  }
+}
+
+.contact_option-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.whats {
+  color: rgba(14, 226, 49, 0.678);
+}
+
+.mess {
+  color: rgb(70, 0, 128);
+}
+
+.email {
+  color: #eee;
+}
+
+.contact_option a {
+  margin-top: 0.7rem;
+  display: inline-block;
+  font-size: 0.8rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.2rem;
+  padding: 2%;
+  border-radius: 5px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), 0 0 40px rgba(0, 0, 0, 0.1),
+    0 0 80px rgba(0, 0, 0, 0.1);
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+label {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  color: #aaa;
+  transition: all 0.3s;
+  pointer-events: none;
+  font-size: 1rem;
+}
+input {
+  height: 3rem;
+}
+input,
+textarea {
+  width: 100%;
+  padding: 1.5rem 1rem 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: transparent;
+  border: 2px solid indigo;
+  resize: none;
+  outline: none;
+}
+
+input:focus + label,
+textarea:focus + label,
+input:not(:placeholder-shown) + label,
+textarea:not(:placeholder-shown) + label {
+  top: 0;
+  left: 1rem;
+  transform: translateY(-100%);
+  font-size: 0.8rem;
+  color: indigo;
+}
+
+input:placeholder-shown + label,
+textarea:placeholder-shown + label {
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: #aaa;
+}
+
+@media screen and (max-width: 1024px) {
+  .contact_container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contact_container {
+    width: 98%;
+  }
+}

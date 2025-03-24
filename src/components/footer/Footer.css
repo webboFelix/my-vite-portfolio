@@ -1,0 +1,38 @@
+.footer_socials a {
+  background: var(--color-bg);
+  color: var(--color-white);
+  padding: 0.8rem;
+  border-radius: 0.7rem;
+  display: flex;
+  border: ipx solid transparent;
+  transition: var(--transition);
+
+  &:hover {
+    background: transparent;
+    color: var(--color-bg);
+    border-color: var(--color-bg);
+  }
+}
+
+.footer_copyright marquee {
+  margin-bottom: 5.5rem;
+  color: var(--color-bg);
+  background-color: var(--color-primary-variant);
+  border-radius: 5px;
+}
+
+marquee span {
+  color: sienna;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .permalinks {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .footer_socials {
+    margin-bottom: 2.5rem;
+  }
+}
