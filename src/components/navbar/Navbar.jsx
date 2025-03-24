@@ -180,7 +180,7 @@ const Navbar = () => {
       </div>
 
       <img
-        src="./balaka.png"
+        src="./passport-bg-rm.png"
         alt=""
         width={16}
         height={16}
