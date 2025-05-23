@@ -7,6 +7,7 @@ import Contact from "./components/contact/Contact";
 import { AnimatePresence, motion } from "framer-motion";
 import Experiene from "./components/experience/Experiene";
 import Footer from "./components/footer/Footer";
+import Article from "./components/Article/Article";
 
 function App() {
   const location = useLocation(); // Get the current location
@@ -20,6 +21,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/experience" element={<Experiene />} />
+          <Route path="/project" element={<Article />} />
         </Routes>
         <Footer />
       </AnimatePresence>

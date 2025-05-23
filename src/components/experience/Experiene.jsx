@@ -59,64 +59,30 @@ const Experiene = () => {
           />
           <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
             <Details
-              position="Junior Structural Engineer"
-              company="Chastin Structural Solutions"
+              position="Frond End Engineer"
+              company="Advent Band"
               compoanyLink={""}
-              time={"2024-2025"}
+              time={"2023-present"}
               address={""}
               work={
                 <div>
                   <p>
-                    Visited construction sites to collaborate with construction
-                    personnel and to ensure compliance with design parameters
-                    and regulations.
-                  </p>
-                  <p className="my-2">
-                    Provided technical advice to industrial personnel regarding
-                    design, construction, and structural repair.
+                    I contribute to the creation of a universal church website
+                    aimed at providing resources and support to church 02 / 3
+                    members and visitors.
                   </p>
                 </div>
               }
             />
 
             <Details
-              position="Senior Structural Engineer"
-              company="Fauget Structural Solutions"
+              position="Web Master"
+              company="Multimedia University"
               compoanyLink={""}
-              time={"2019 - present"}
+              time={"2022 - 2024"}
               address={""}
-              work={`Engaged in the construction of more than two new
-buildings during the one year period. - Presented
-environmental laws, fire regulations, and building
-codes to city and county government agencies.`}
-            />
-
-            <Details
-              position=""
-              company="Multimedia University of Kenya."
-              compoanyLink={""}
-              time={"present"}
-              address={""}
-              work={`Currently undertaking the design of an 11-storey student hostel in Multimedia University
-of Kenya as my final year project.`}
-            />
-
-            <Details
-              position=""
-              company="Ruiru."
-              compoanyLink={""}
-              time={""}
-              address={""}
-              work={`Design of a 6-storey residential apartment in Kirigiti- off Kiambu town for Anna Njenga.`}
-            />
-
-            <Details
-              position=""
-              company="Kirigiti- off Kiambu town."
-              compoanyLink={""}
-              time={""}
-              address={""}
-              work={`Design of a 6-storey residential apartment in Kirigiti- off Kiambu town for Anna Njenga.`}
+              work={`EI collaborate with my colleagues to develop,
+deploy and Update websites for various projects and initiatives.`}
             />
           </ul>
         </div>
@@ -131,7 +97,7 @@ of Kenya as my final year project.`}
           <div className="flex justify-between w-full gap-[5%] mt-10 lg:space-y-10 lg:flex-col">
             <div className="bg-black/70 dark:bg-transparent dark:border-2 dark:shadow-shadowLight p-8 rounded-xl relative w-[50%] lg:w-full shadow-custom hover:bg-transparent dark:hover:bg-white/10 hover:border-2 hover:bottom-5 transform transition-all duration-300 easeInOut">
               <h4 className="font-semibold dark:text-white/60 text-2xl text-center text-black/60 capitalize">
-                leadership experience.
+                leadership Skills.
               </h4>
               <div className="bg-black/20 rounded-xl h-2 w-full dark:bg-white/20"></div>
               <ul className="flex flex-col">
@@ -144,10 +110,7 @@ of Kenya as my final year project.`}
                     className="animate-pulse"
                   />
 
-                  <p>
-                    President of student council- Gethsemane Garden High school-
-                    2018.
-                  </p>
+                  <p>Communication Skills.</p>
                 </li>
                 <li className="flex items-start gap-4 my-2">
                   <img
@@ -157,8 +120,7 @@ of Kenya as my final year project.`}
                     alt="approval"
                     className="animate-pulse"
                   />
-                  Multimedia University of Kenya Civil engineering students’
-                  class representative.
+                  Emotional Intelligence (EQ).
                 </li>
                 <li className="flex items-start gap-4 my-2">
                   <img
@@ -168,11 +130,7 @@ of Kenya as my final year project.`}
                     alt="approval"
                     className="animate-pulse"
                   />
-                  <p>
-                    {" "}
-                    Finance coordinator- Multimedia University of Kenya Seventh
-                    day Adventist church 2023 mission.
-                  </p>
+                  <p> Decision-Making & Problem-Solving .</p>
                 </li>
                 <li className="flex items-start gap-4 my-2">
                   <img
@@ -182,11 +140,7 @@ of Kenya as my final year project.`}
                     alt="approval"
                     className="animate-pulse"
                   />
-                  <p>
-                    {" "}
-                    Events coordinator- Multimedia University of Kenya
-                    Engineering students’ association, MUKESA.
-                  </p>
+                  <p> Team Building & Collaboration.</p>
                 </li>
               </ul>
             </div>
@@ -207,8 +161,8 @@ of Kenya as my final year project.`}
                     className="animate-pulse"
                   />
                   <p>
-                    Certificate of merit- Kenya science and engineering Fair-
-                    County level.
+                    Certificate of merit- web Master, Multimedia University
+                    Science Students Assocication (MMUSSA).
                   </p>
                 </li>
 
@@ -221,23 +175,8 @@ of Kenya as my final year project.`}
                     className="animate-pulse"
                   />
                   <p>
-                    Certificate of merit- Class representative Civil engineering
-                    students- 2024
-                  </p>
-                </li>
-
-                <li className="flex items-start gap-4 my-2">
-                  <img
-                    width="50"
-                    height="50"
-                    src="https://img.icons8.com/3d-fluency/50/certificate.png"
-                    alt="certificate"
-                    className="animate-pulse"
-                  />
-                  <p>
-                    Certificate of merit- Event coordinator Multimedia
-                    University of Kenya Engineering Students’ association,
-                    MUKESA.
+                    Certificate of merit- Class representative Applied Physics
+                    and Computer Science students- 2025
                   </p>
                 </li>
               </ul>

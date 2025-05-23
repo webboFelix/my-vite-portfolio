@@ -48,23 +48,25 @@ const Education = () => {
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
           <Details
-            type="Bachelor of Science in Civil Engineering."
-            time="2019-2024"
+            type="Bachelor of Science in Applied Physics and Computer Science."
+            time="2021-2025"
             place={"Multimedia University of Kenya."}
-            info={"Accomplished my Undergraduate study in Civil Engineering."}
+            info={
+              "Awaiting my Undergraduate study in Applied Physics and Computer Science."
+            }
           />
 
           <Details
             type="Highschool education."
-            time="2015-2018"
-            place={"Gethsemane Garden High School."}
+            time="2017-2020/2021"
+            place={"Friends Secondary School Handidi."}
             info={"Accomplished my Kenya Certificate of Secondary Education."}
           />
 
           <Details
             type="primary education."
-            time="2007 - 2014"
-            place={"Shalom Christian Centre, kenya."}
+            time="2008 - 2016"
+            place={"Elukho Primary School."}
             info={"Accomplished my Keny Certificate of Primary Education."}
           />
         </ul>

@@ -57,28 +57,35 @@ const Article = () => {
   return (
     <Layout className="pt-16">
       <h2 className="font-bold text-4xl w-full text-center my-16 mt-32">
-        All Article
+        My Projects
       </h2>
       <ul>
         <Art
-          title="Software Development Process"
-          date="March 29, 2024"
-          link="/"
-          img={"./balaka.png"}
+          title="MMU Dispensary health-connect web application"
+          date="April 20, 2025"
+          link="https://mmu-healthconnect.netlify.app/"
+          img={"./project1.png"}
         />
 
         <Art
-          title="Software Development Process"
-          date="March 29, 2024"
-          link="/"
-          img={"./balaka.png"}
+          title="Philip Portifolio"
+          date="Feb 10, 2025"
+          link="https://philip-portifolio.netlify.app/"
+          img={"./project2.png"}
         />
 
         <Art
-          title="Software Development Process"
-          date="March 29, 2024"
-          link="/"
-          img={"./balaka.png"}
+          title="Charles Portifolio"
+          date="Oct 28, 2024"
+          link="https://charles-portifolio.netlify.app/"
+          img={"./project3.png"}
+        />
+
+        <Art
+          title="Advent Band"
+          date="April 15, 2024"
+          link="https://adventband.org/#"
+          img={"./project4.png"}
         />
       </ul>
     </Layout>
