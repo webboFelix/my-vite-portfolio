@@ -72,14 +72,14 @@ const Home = () => {
               </p>
               <div className="flex itemes-center self-start mt-2 lg:self-center">
                 <Link
-                  to="./softwareCV.pdf"
+                  to="./file/softwareCV_N.pdf"
                   target={"_blank"}
                   className="flex items-center bg-black dark:bg-white text-white dark:text-black p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-white hover:text-black border-2 border-solid border-transparent hover:border-black hover:dark:bg-transparent hover:dark:text-white hover:dark:border-white md:p-2 md:px-4 md:text-base"
                 >
                   Software <LinkArrow className={"w-6 ml-1"} />
                 </Link>
                 <Link
-                  to="./cybersecurityCV.pdf"
+                  to="./file/cybersecurityCV.pdf"
                   target={"_blank"}
                   className="flex items-center bg-orange-200 mx-1 dark:bg-white text-white dark:text-black p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-white hover:text-black border-2 border-solid border-transparent hover:border-black hover:dark:bg-transparent hover:dark:text-white hover:dark:border-white md:p-2 md:px-4 md:text-base"
                 >
