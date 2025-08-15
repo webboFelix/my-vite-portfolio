@@ -117,6 +117,7 @@ const Footer = () => {
               </a>
             </h1>
             <h4>Web Developer.</h4>
+            <h4>Cybersecurity</h4>
           </div>
         </div>
         <hr className="w-full h-5 my-4" />

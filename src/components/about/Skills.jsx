@@ -20,7 +20,7 @@ const Skills = () => {
   return (
     <>
       <h2 className="font-bold dark:text-white underline text-4xl mt-20 w-full text-center capitalize">
-        skills.
+        Software Development Skills.
       </h2>
       <p className="font-semibold dark:text-white/40 text-black/50 text-xl mt-2 mb-5 w-full text-center md:text-sm md:mt-5">
         Elevating Development, Pioneering Scalable and Secure Digital
@@ -49,6 +49,38 @@ const Skills = () => {
         <Tech name="Clerk Authentication" x="-18vw" y="6vw" />
         <Tech name="Cybersecurity Fundamentals" x="0vw" y="-20vw" />
         <Tech name="UI Design" x="0vw" y="20vw" />
+      </div>
+
+      <h2 className="font-bold dark:text-white underline text-4xl mt-20 w-full text-center capitalize">
+        Cybersecurity.
+      </h2>
+      <p className="font-semibold dark:text-white/40 text-black/50 text-xl mt-2 mb-5 w-full text-center md:text-sm md:mt-5">
+        Fortifying Systems, Advancing Resilient and Secure Digital Frontiers.
+      </p>
+
+      <div
+        className="w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight lg:h-[80vh] sm:h-[60vh] xs:h-[50vh]
+      lg:bg-circularLightLg lg:bg-circularDarkLg
+      lg:bg-circularLightMd lg:bg-circularDarkMd
+      lg:bg-circularLightSm lg:bg-circularDarkSm"
+      >
+        <motion.div
+          className="cursor-pointer flex items-center justify-center rounded-full font-semibold bg-black  text-white p-8 shadow-black lg:p-6 md:p-4 xs:text-xs xs:p-2"
+          whileHover={{ scale: 1.05 }}
+        >
+          CYBERSECURITY
+        </motion.div>
+
+        <Tech name="Governance" x="-18vw" y="-15vw" />
+        <Tech name="Data Privacy" x="20vw" y="6vw" />
+        <Tech name="Risk" x="0vw" y="12vw" />
+        <Tech name="Compliance" x="15vw" y="-12vw" />
+        <Tech name="Vulnerability Management" x="28vw" y="-5vw" />
+        <Tech name="System and Network Security" x="-15vw" y="-8vw" />
+        <Tech name="Cloud Security" x="-28vw" y="0vw" />
+        <Tech name="Security Operations and Management" x="-18vw" y="6vw" />
+        <Tech name="Cybersecurity Fundamentals" x="0vw" y="-20vw" />
+        <Tech name="Incident Response and Systems Forensics" x="0vw" y="20vw" />
       </div>
       <Layout className="!mx-0">
         <h2 className="text-center dark:text-white/70 text-black/70 text-2xl capitalize font-bold">

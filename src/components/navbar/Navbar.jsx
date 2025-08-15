@@ -122,6 +122,12 @@ const Navbar = () => {
 
           <CustomLink to="/experience" title="Experience" className="mx-4" />
 
+          <CustomLink
+            to="/certifications"
+            title="Certifications"
+            className="mx-4"
+          />
+
           <CustomLink to="/project" title="Project" className="mx-4" />
 
           <CustomLink to="/contact" title="Contact" className="ml-4" />

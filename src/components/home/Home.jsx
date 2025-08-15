@@ -45,39 +45,50 @@ const Home = () => {
 
             <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center">
               <AnimatedText
-                text="Full Stack Web Developer."
+                text="Full Stack Web Developer || Cybersecurity."
                 className="!text-4xl text-left xl:!text-3xl md:!text-2xl sm:!text-xl"
               />
               <p className="my-4 text-base font-medium md:text-sm sm:text-xl">
-                I am a full-stack web developer with a strong passion for
-                building scalable, efficient, and user-friendly applications. I
-                specialize in both front-end and back-end development,
-                leveraging modern frameworks and technologies to create seamless
-                digital experiences. My expertise includes designing and
-                implementing dynamic web applications, optimizing performance,
-                and ensuring security in web-based solutions.
+                I am a passionate Full Stack Developer with a strong foundation
+                in software development, networking, cloud computing, and
+                cybersecurity. Skilled in both front-end and back-end
+                development, I create scalable, efficient, and secure web
+                applications that deliver seamless and engaging digital
+                experiences.
               </p>
-              <p>
-                I am particularly interested in using my skills to contribute to
-                innovative projects that drive technological advancements and
-                enhance user engagement. I am eager to collaborate with
-                experienced professionals, learn from industry leaders, and
-                continuously refine my abilities. My goal is to create impactful
-                digital solutions that align with the evolving needs of
+              <p className="my-4 text-base font-medium md:text-sm sm:text-xl">
+                Leveraging modern frameworks and technologies, I design and
+                implement dynamic solutions, from intuitive, responsive user
+                interfaces to robust backend architectures, while ensuring
+                top-tier performance, security, and reliability.
+              </p>
+              <p className="my-4 text-base font-medium md:text-sm sm:text-xl">
+                With a mindset driven by innovation, I thrive on building
+                impactful solutions that enhance user engagement, solve
+                real-world problems, and push the boundaries of technology. I
+                value collaboration, continuous learning, and translating ideas
+                into secure, scalable systems that meet the evolving needs of
                 businesses and society.
               </p>
               <div className="flex itemes-center self-start mt-2 lg:self-center">
                 <Link
-                  to="./resume.pdf"
+                  to="./softwareCV.pdf"
                   target={"_blank"}
                   className="flex items-center bg-black dark:bg-white text-white dark:text-black p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-white hover:text-black border-2 border-solid border-transparent hover:border-black hover:dark:bg-transparent hover:dark:text-white hover:dark:border-white md:p-2 md:px-4 md:text-base"
                 >
-                  resume <LinkArrow className={"w-6 ml-1"} />
+                  Software <LinkArrow className={"w-6 ml-1"} />
+                </Link>
+                <Link
+                  to="./cybersecurityCV.pdf"
+                  target={"_blank"}
+                  className="flex items-center bg-orange-200 mx-1 dark:bg-white text-white dark:text-black p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-white hover:text-black border-2 border-solid border-transparent hover:border-black hover:dark:bg-transparent hover:dark:text-white hover:dark:border-white md:p-2 md:px-4 md:text-base"
+                >
+                  Cybersecurity <LinkArrow className={"w-6 ml-1"} />
                 </Link>
                 <a
                   href="mailto:felixwebbo8@gmail.com"
                   target={"_blank"}
-                  className="ml-4 text-lg font-medium capitalize text-black dark:text-white underline md:text-base"
+                  className="ml-4 text-lg font-medium bg-cyan-300 hover:bg-orange-200 flex items-center rounded-lg p-2 capitalize text-black dark:text-white md:text-base"
                 >
                   Send Email
                 </a>
