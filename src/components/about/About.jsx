@@ -76,7 +76,7 @@ const About = () => {
             <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-black bg-white p-8 xl:col-span-4 md:order-1 md:col-span-8">
               <div className="absolute top-0 bg-black w-[102%] h-[105%] -z-10 -right-4 rounded-[1.5rem]" />
               <img
-                src="./web-removebg.png"
+                src="./profileImg2.png"
                 alt="prof"
                 className="w-full h-auto rounded-2xl"
               />

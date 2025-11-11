@@ -16,7 +16,7 @@ const Home = () => {
           <div className="flex items-center justify-between w-full lg:flex-col">
             <div className="w-1/2 md:w-full">
               <img
-                src="./webbo2-removebg.png"
+                src="./profileImg1.png"
                 alt="profile"
                 className="w-[50%] h-auto lg:hidden md:inline-block md:w-full transition-all duration-500 ease-in-out"
                 style={{
@@ -43,7 +43,7 @@ const Home = () => {
               />
             </div>
 
-            <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center">
+            <div className="w-1/2 mt-20 flex flex-col items-center self-center lg:w-full lg:text-center">
               <AnimatedText
                 text="Full Stack Web Developer || Cybersecurity."
                 className="!text-4xl text-left xl:!text-3xl md:!text-2xl sm:!text-xl"

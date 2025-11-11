@@ -61,7 +61,7 @@ const Article = () => {
       </h2>
       <ul>
         <Art
-          title="Hotel Vannah, My current project"
+          title="Hotel Vannah <Nextjs, Clerk, Postgress>, My current project"
           date=" From June, 2025"
           link="https://hotelvannah.com/"
           img={"./HV2.png"}

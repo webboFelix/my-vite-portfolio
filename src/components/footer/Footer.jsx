@@ -50,7 +50,7 @@ const Footer = () => {
       <Layout className="pt-0 md:pt-16 sm:pt-8 bg-gradient-to-b from-black/30 via-black/50 to-black/90">
         <div className="flex mx-5 justify-between items-center sm:flex-col">
           <img
-            src="./passport-bg-rm.png"
+            src="./profileImg1.png"
             className="w-32 h-32 rounded-full flex-shrink-0 border-4 border-solid-cyan-900"
             alt="footerImage"
           />
