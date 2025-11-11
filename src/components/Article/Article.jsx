@@ -64,7 +64,7 @@ const Article = () => {
           title="Hotel Vannah, My current project"
           date=" From June, 2025"
           link="https://hotelvannah.com/"
-          img={"./HV.png"}
+          img={"./HV2.png"}
         />
 
         <Art
