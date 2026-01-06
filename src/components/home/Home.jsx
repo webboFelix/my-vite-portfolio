@@ -45,30 +45,26 @@ const Home = () => {
 
             <div className="w-1/2 mt-20 flex flex-col items-center self-center lg:w-full lg:text-center">
               <AnimatedText
-                text="Full Stack Web Developer || Cybersecurity."
+                text="Junior Cybersecurity Specialist."
                 className="!text-4xl text-left xl:!text-3xl md:!text-2xl sm:!text-xl"
               />
               <p className="my-4 text-base font-medium md:text-sm sm:text-xl">
-                I am a passionate Full Stack Developer with a strong foundation
-                in software development, networking, cloud computing, and
-                cybersecurity. Skilled in both front-end and back-end
-                development, I create scalable, efficient, and secure web
-                applications that deliver seamless and engaging digital
-                experiences.
+                I am a Junior Cybersecurity Specialist with a strong foundation
+                in cloud computing, networking, web development, and
+                cybersecurity principles. I have hands-on experience supporting
+                IT systems, securing network infrastructure, and implementing
+                best practices to protect digital assets.
               </p>
               <p className="my-4 text-base font-medium md:text-sm sm:text-xl">
-                Leveraging modern frameworks and technologies, I design and
-                implement dynamic solutions, from intuitive, responsive user
-                interfaces to robust backend architectures, while ensuring
-                top-tier performance, security, and reliability.
+                My background includes system administration on Windows and
+                Linux platforms, basic cloud security concepts, web application
+                fundamentals, and network configuration and troubleshooting.
               </p>
               <p className="my-4 text-base font-medium md:text-sm sm:text-xl">
-                With a mindset driven by innovation, I thrive on building
-                impactful solutions that enhance user engagement, solve
-                real-world problems, and push the boundaries of technology. I
-                value collaboration, continuous learning, and translating ideas
-                into secure, scalable systems that meet the evolving needs of
-                businesses and society.
+                I am passionate about identifying vulnerabilities, improving
+                system resilience, and contributing to secure, scalable, and
+                reliable technology environments while continuously learning and
+                growing within the cybersecurity field.
               </p>
               <div className="flex itemes-center self-start mt-2 lg:self-center">
                 <Link
