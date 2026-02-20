@@ -75,9 +75,9 @@ const Contact = () => {
               >
                 <img src="./gif-gmail-logo.gif" alt="Gmail" />
                 <h4>Email</h4>
-                <h5>felixwebbo8@gmail.com</h5>
+                <h5>felixwebbo.fw@gmail.com</h5>
                 <a
-                  href="mailto:felixwebbo8@gmail.com"
+                  href="mailto:felixwebbo.fw@gmail.com"
                   target="_blank"
                   rel="noreferrer"
                   className="hover:text-blue-400 hover:bg-gray-300 hover:text-bold p-2 rounded transition-transition"

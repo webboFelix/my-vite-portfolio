@@ -116,8 +116,8 @@ const Footer = () => {
                 FELIX WEBBO.
               </a>
             </h1>
-            <h4>Web Developer.</h4>
-            <h4>Cybersecurity</h4>
+            <h4>Cloud and Application Security Specialist.</h4>
+            <h4>Penetration Tester</h4>
           </div>
         </div>
         <hr className="w-full h-5 my-4" />
@@ -172,7 +172,7 @@ const Footer = () => {
 
               <br />
               <span className="flex items-center">
-                <a href="mailto:felixwebbo8@gmail.com" className="flex gap-2">
+                <a href="mailto:felixwebbo.fw@gmail.com" className="flex gap-2">
                   {" "}
                   <img
                     src="./gif-gmail-logo.gif"

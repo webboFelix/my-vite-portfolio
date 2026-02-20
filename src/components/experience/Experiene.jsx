@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import LiIcon from "./LiIcon";
-import Education from "../education/Education";
 import Home from "../home/Home";
 import Layout from "../layout/Layout";
 
@@ -66,10 +65,28 @@ const Experiene = () => {
               address={""}
               work={
                 <div>
-                  <p>
+                  <p className="text-justify">
                     I contribute to the creation of a universal church website
                     aimed at providing resources and support to church 02 / 3
                     members and visitors.
+                  </p>
+                </div>
+              }
+            />
+
+            <Details
+              position="IT Support(Attachment)"
+              company="Masinde Muliro University of Science and Technology"
+              compoanyLink={""}
+              time={"May, 2025 - August, 2025"}
+              address={""}
+              work={
+                <div>
+                  <p className="text-justify">
+                    Provided technical support, troubleshot hardware and
+                    software issues, configured networks, installed systems,
+                    assisted users, and maintained secure, reliable IT
+                    infrastructure daily.
                   </p>
                 </div>
               }
@@ -81,8 +98,14 @@ const Experiene = () => {
               compoanyLink={""}
               time={"2022 - 2024"}
               address={""}
-              work={`EI collaborate with my colleagues to develop,
-deploy and Update websites for various projects and initiatives.`}
+              work={
+                <div>
+                  <p className="text-justify">
+                    I collaborate with my colleagues to develop, deploy and
+                    Update websites for various projects and initiatives.
+                  </p>
+                </div>
+              }
             />
           </ul>
         </div>
@@ -183,7 +206,6 @@ deploy and Update websites for various projects and initiatives.`}
             </div>
           </div>
         </Layout>
-        <Education />
       </div>
     </>
   );

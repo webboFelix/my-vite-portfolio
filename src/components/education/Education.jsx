@@ -34,44 +34,49 @@ const Education = () => {
   });
 
   return (
-    <div className="mt-16">
-      <h2 className="font-bold text-4xl mb-5 w-full text-center md:text-3xl xs:text-2xl md:mb-2">
-        Education.
-      </h2>
-      <h5 className=" dark:text-white/70 text-center text-black/30 mb-10">
-        my education background information.
-      </h5>
-      <div ref={ref} className="w-[75%] mx-auto relative lg:w-[90%] md:w-full">
-        <motion.div
-          style={{ scaleY: scrollYProgress }}
-          className="absolute left-9 top-0 w-[4px] dark:bg-white h-full bg-black origin-top md:w-[2px] md:left-[30px] xs:left-[20px]"
-        />
-        <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
-          <Details
-            type="Bachelor of Science in Applied Physics and Computer Science."
-            time="2021-2025"
-            place={"Multimedia University of Kenya."}
-            info={
-              "Awaiting my Undergraduate study in Applied Physics and Computer Science."
-            }
+    <>
+      <div className="mt-16">
+        <h2 className="font-bold text-4xl mb-5 w-full text-center md:text-3xl xs:text-2xl md:mb-2">
+          Education.
+        </h2>
+        <h5 className=" dark:text-white/70 text-center text-black/30 mb-10">
+          My education background information.
+        </h5>
+        <div
+          ref={ref}
+          className="w-[75%] mx-auto relative lg:w-[90%] md:w-full"
+        >
+          <motion.div
+            style={{ scaleY: scrollYProgress }}
+            className="absolute left-9 top-0 w-[4px] dark:bg-white h-full bg-black origin-top md:w-[2px] md:left-[30px] xs:left-[20px]"
           />
+          <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
+            <Details
+              type="Bachelor of Science in Applied Physics and Computer Science."
+              time="2021-2025"
+              place={"Multimedia University of Kenya."}
+              info={
+                "Accomplished Undergraduate study in Applied Physics and Computer Science."
+              }
+            />
 
-          <Details
-            type="Highschool education."
-            time="2017-2020/2021"
-            place={"Friends Secondary School Handidi."}
-            info={"Accomplished my Kenya Certificate of Secondary Education."}
-          />
+            <Details
+              type="Highschool education."
+              time="2017-2020/2021"
+              place={"Friends Secondary School Handidi."}
+              info={"Accomplished my Kenya Certificate of Secondary Education."}
+            />
 
-          <Details
-            type="primary education."
-            time="2008 - 2016"
-            place={"Elukho Primary School."}
-            info={"Accomplished my Keny Certificate of Primary Education."}
-          />
-        </ul>
+            <Details
+              type="primary education."
+              time="2008 - 2016"
+              place={"Elukho Primary School."}
+              info={"Accomplished my Keny Certificate of Primary Education."}
+            />
+          </ul>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

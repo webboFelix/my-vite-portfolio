@@ -45,27 +45,24 @@ const Home = () => {
 
             <div className="w-1/2 mt-20 flex flex-col items-center self-center lg:w-full lg:text-center">
               <AnimatedText
-                text="Junior Cybersecurity Specialist."
+                text="Cloud & Application Security Specialist."
                 className="!text-4xl text-left xl:!text-3xl md:!text-2xl sm:!text-xl"
               />
-              <p className="my-4 text-base font-medium md:text-sm sm:text-xl">
-                I am a Junior Cybersecurity Specialist with a strong foundation
-                in cloud computing, networking, web development, and
-                cybersecurity principles. I have hands-on experience supporting
-                IT systems, securing network infrastructure, and implementing
-                best practices to protect digital assets.
+              <p className="my-4 text-justify text-base font-medium md:text-sm sm:text-xl">
+                I am a Cloud & Application Security Specialist focused on
+                strengthening modern digital infrastructure through offensive
+                and defensive security strategies. With expertise in penetration
+                testing, cloud security, and secure systems architecture, I
+                approach security from both an attacker’s and engineer’s
+                perspective. I identify vulnerabilities early and implement
+                robust controls that reduce risk and reinforce resilience. My
+                work integrates security-by-design principles across the entire
+                application lifecycle, ensuring protection from architecture to
+                deployment. Driven by continuous growth and evolving threat
+                intelligence, I deliver measurable security impact in an
+                increasingly complex cyber landscape.
               </p>
-              <p className="my-4 text-base font-medium md:text-sm sm:text-xl">
-                My background includes system administration on Windows and
-                Linux platforms, basic cloud security concepts, web application
-                fundamentals, and network configuration and troubleshooting.
-              </p>
-              <p className="my-4 text-base font-medium md:text-sm sm:text-xl">
-                I am passionate about identifying vulnerabilities, improving
-                system resilience, and contributing to secure, scalable, and
-                reliable technology environments while continuously learning and
-                growing within the cybersecurity field.
-              </p>
+
               <div className="flex itemes-center self-start mt-2 lg:self-center">
                 <Link
                   to="./file\Felix-Webbo-Resume.pdf"
@@ -75,7 +72,7 @@ const Home = () => {
                   RESUME <LinkArrow className={"w-6 ml-1"} />
                 </Link>
                 <a
-                  href="mailto:felixwebbo8@gmail.com"
+                  href="mailto:felixwebbo.fw@gmail.com"
                   target={"_blank"}
                   className="ml-4 text-lg font-medium bg-cyan-300 hover:bg-orange-200 flex items-center rounded-lg p-2 capitalize text-black dark:text-white md:text-base"
                 >
@@ -86,7 +83,7 @@ const Home = () => {
           </div>
         </Layout>
         <HireMe />
-        <div className="absolute right-8 bottom-8 inline-block w-24 md:hidden">
+        <div className="absolute right-8  top-[90%] inline-block w-24 md:hidden">
           <img src="./light.png" alt="light" className="w-full h-auto" />
         </div>
       </div>

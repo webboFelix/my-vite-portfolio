@@ -9,6 +9,8 @@ import Experiene from "./components/experience/Experiene";
 import Footer from "./components/footer/Footer";
 import Article from "./components/Article/Article";
 import Certs from "./components/certs/Certs";
+//import Education from "./components/education/Education";
+import Edu from "./components/showEducation/Edu";
 
 function App() {
   const location = useLocation(); // Get the current location
@@ -23,6 +25,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/experience" element={<Experiene />} />
           <Route path="/certifications" element={<Certs />} />
+          <Route path="/education" element={<Edu />} />
           <Route path="/project" element={<Article />} />
         </Routes>
         <Footer />

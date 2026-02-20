@@ -120,6 +120,8 @@ const Navbar = () => {
 
           <CustomLink to="/about" title="About" className="mx-4" />
 
+          <CustomLink to="/education" title="Education" className="mx-4" />
+
           <CustomLink to="/experience" title="Experience" className="mx-4" />
 
           <CustomLink
@@ -214,6 +216,13 @@ const Navbar = () => {
             <CustomMobileLink
               to="/about"
               title="About"
+              className=""
+              toggle={handleClick}
+            />
+
+            <CustomMobileLink
+              to="/education"
+              title="Education"
               className=""
               toggle={handleClick}
             />

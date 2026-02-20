@@ -38,39 +38,42 @@ const About = () => {
       <div className="flex w-full flex-col items-center justify-center">
         <Layout className="pt-32">
           <AnimatedText
-            text="From Blueprint to Breakthrough: Building Secure, High-Performance Digital Solutions."
+            text="Architecting Secure Cloud & Application Systems for a Resilient Digital Future."
             className="mb-16 lg:pt-16 lg:!text-4xl sm:!text-2xl xs:!text-xl sm:mb-8"
           />
 
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
-            <div className="col-span-3 xl:col-span-4 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:col-span-8">
+            <div className="col-span-3 xl:col-span-4 flex flex-col items-start text-justify justify-start xl:col-span-4 md:order-2 md:col-span-8">
               <h2 className="mb-4 text-lg font-bold uppercase text-black/75 dark:text-white/50">
                 biography
               </h2>
               <p className="font-medium  dark:text-white">
-                A Full Stack Developer with a strong background in Applied
-                Physics and Computer Science, I combine a deep understanding of
-                technology’s theoretical foundations with hands-on expertise in
-                modern web development. My technical toolkit includes MongoDB,
-                MySQL, JavaScript, TypeScript, React, Next.js, Tailwind CSS, and
-                Node.js, complemented by a solid grounding in networking, cloud
-                computing, and cybersecurity.
+                I am a results-driven junior cybersecurity specialist
+                specializing in penetration testing and cloud security,
+                supported by a strong foundation in web development and secure
+                systems architecture. My background enables me to approach
+                security from both an attacker’s and a builder’s perspective,
+                ensuring systems are designed with resilience at their core. I
+                am passionate about developing secure, scalable digital
+                environments that can withstand evolving cyber threats.
               </p>
               <p className="my-4 font-medium dark:text-white">
-                I am passionate about building scalable, efficient, and secure
-                web applications that deliver exceptional user experiences. By
-                integrating robust security measures into every stage of
-                development, I ensure that my solutions are not only
-                high-performing but also resilient against evolving digital
-                threats.
+                I possess hands-on expertise in web and network penetration
+                testing, endpoint security, vulnerability assessment, and secure
+                infrastructure design. I proactively identify weaknesses at
+                early stages and implement effective security controls that
+                reduce attack surfaces and mitigate potential breaches. By
+                integrating security-by-design principles throughout the
+                development lifecycle, I ensure applications remain protected
+                from conception to deployment.
               </p>
               <p className="my-4 font-medium dark:text-white">
-                With the ability to bridge the worlds of software engineering
-                and cybersecurity, I excel at crafting secure, innovative
-                systems that meet both user needs and industry standards. I am
-                driven by a commitment to continuous learning, collaborative
-                problem-solving, and developing impactful solutions that push
-                technological boundaries.
+                I am committed to continuous learning and professional growth in
+                the ever-evolving cybersecurity landscape. I consistently adapt
+                to emerging technologies and modern attack techniques to remain
+                ahead of threats. My goal is to deliver measurable security
+                impact while contributing to stronger, more secure
+                organizations.
               </p>
             </div>
             <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-black bg-white p-8 xl:col-span-4 md:order-1 md:col-span-8">
