@@ -5,7 +5,17 @@ import Transition from "../transition/Transition";
 import { motion, AnimatePresence } from "framer-motion";
 import { LinkArrow } from "../icons/ExternalLink";
 
-const LabCard = ({ title, problemStatement, approach, tools, screenshots, lessons, link, date, category }) => {
+const LabCard = ({
+  title,
+  problemStatement,
+  approach,
+  tools,
+  screenshots,
+  lessons,
+  link,
+  date,
+  category,
+}) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
@@ -18,8 +28,12 @@ const LabCard = ({ title, problemStatement, approach, tools, screenshots, lesson
     >
       <div className="flex justify-between items-start mb-4">
         <div className="flex-1">
-          <h3 className="text-2xl font-bold dark:text-white mb-2 capitalize">{title}</h3>
-          <span className="text-sm text-gray-600 dark:text-gray-400">{date}</span>
+          <h3 className="text-2xl font-bold dark:text-white mb-2 capitalize">
+            {title}
+          </h3>
+          <span className="text-sm text-gray-600 dark:text-gray-400">
+            {date}
+          </span>
         </div>
         <span className="px-3 py-1 bg-cyan-300 dark:bg-cyan-600 text-black dark:text-white rounded-full text-xs font-semibold">
           {category}
@@ -27,8 +41,12 @@ const LabCard = ({ title, problemStatement, approach, tools, screenshots, lesson
       </div>
 
       <div className="mb-4">
-        <h4 className="text-lg font-semibold dark:text-white mb-2">Problem Statement</h4>
-        <p className="text-gray-700 dark:text-gray-300 text-justify">{problemStatement}</p>
+        <h4 className="text-lg font-semibold dark:text-white mb-2">
+          Problem Statement
+        </h4>
+        <p className="text-gray-700 dark:text-gray-300 text-justify">
+          {problemStatement}
+        </p>
       </div>
 
       <AnimatePresence>
@@ -41,12 +59,18 @@ const LabCard = ({ title, problemStatement, approach, tools, screenshots, lesson
             className="overflow-hidden"
           >
             <div className="mb-4">
-              <h4 className="text-lg font-semibold dark:text-white mb-2">Approach</h4>
-              <p className="text-gray-700 dark:text-gray-300 text-justify">{approach}</p>
+              <h4 className="text-lg font-semibold dark:text-white mb-2">
+                Approach
+              </h4>
+              <p className="text-gray-700 dark:text-gray-300 text-justify">
+                {approach}
+              </p>
             </div>
 
             <div className="mb-4">
-              <h4 className="text-lg font-semibold dark:text-white mb-2">Tools Used</h4>
+              <h4 className="text-lg font-semibold dark:text-white mb-2">
+                Tools Used
+              </h4>
               <div className="flex flex-wrap gap-2">
                 {tools.map((tool, index) => (
                   <span
@@ -61,7 +85,9 @@ const LabCard = ({ title, problemStatement, approach, tools, screenshots, lesson
 
             {screenshots && screenshots.length > 0 && (
               <div className="mb-4">
-                <h4 className="text-lg font-semibold dark:text-white mb-2">Screenshots</h4>
+                <h4 className="text-lg font-semibold dark:text-white mb-2">
+                  Screenshots
+                </h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {screenshots.map((screenshot, index) => (
                     <motion.img
@@ -77,7 +103,9 @@ const LabCard = ({ title, problemStatement, approach, tools, screenshots, lesson
             )}
 
             <div className="mb-4">
-              <h4 className="text-lg font-semibold dark:text-white mb-2">Key Lessons Learned</h4>
+              <h4 className="text-lg font-semibold dark:text-white mb-2">
+                Key Lessons Learned
+              </h4>
               <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
                 {lessons.map((lesson, index) => (
                   <li key={index}>{lesson}</li>
@@ -120,7 +148,9 @@ const LabSection = ({ title, labs, icon }) => {
     >
       <div className="flex items-center gap-4 mb-8">
         {icon && <div className="text-4xl">{icon}</div>}
-        <h2 className="text-4xl font-bold dark:text-white capitalize">{title}</h2>
+        <h2 className="text-4xl font-bold dark:text-white capitalize">
+          {title}
+        </h2>
         <div className="flex-1 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full"></div>
       </div>
       <div className="space-y-6">
@@ -134,60 +164,91 @@ const LabSection = ({ title, labs, icon }) => {
 
 const LabChallenges = () => {
   // Sample data - Replace with your actual lab challenges
+  {
+    /* HackTheBox Labs */
+  }
   const hackTheBoxLabs = [
     {
-      title: "Starting Point - Meow",
-      problemStatement: "Meow is a beginner-friendly machine designed to introduce basic penetration testing concepts. The goal is to gain initial access and retrieve the user flag.",
-      approach: "Started with port scanning using nmap to identify open ports and services. Discovered an open Telnet service on port 23. Attempted default credentials and found that the root user had no password set. Successfully logged in and retrieved the user flag.",
-      tools: ["nmap", "telnet", "Linux commands"],
-      screenshots: ["./labs/htb-meow-1.png", "./labs/htb-meow-2.png"],
-      lessons: [
-        "Always check for default credentials and misconfigurations",
-        "Port scanning is crucial for reconnaissance",
-        "Never leave services with default or weak credentials",
+      title: "Introduction to Network Traffic Analysis",
+      problemStatement:
+        "Analyze network traffic to identify normal and malicious communication patterns, applying foundational traffic analysis techniques in a controlled lab environment.",
+      approach:
+        "Completed guided modules focusing on packet inspection, protocol analysis, and traffic pattern recognition. Captured and examined network traffic using analysis tools to identify anomalies and suspicious activity. Applied filtering techniques to isolate specific protocols and sessions for deeper investigation. Interpreted TCP handshakes, DNS queries, and HTTP communications to understand network behavior. Documented findings and correlated observations with security concepts to strengthen investigative skills.",
+      tools: [
+        "Wireshark",
+        "TCP/IP Protocol Suite",
+        "HTB Academy Lab Environment",
       ],
-      link: "#",
-      date: "January 2024",
+      screenshots: ["./labs/htb-network-traffic-analysis-1.png"],
+      lessons: [
+        "Traffic analysis is critical for detecting intrusions and abnormal behavior",
+        "Protocol understanding improves investigative accuracy",
+        "Effective filtering streamlines packet analysis",
+        "Baseline network behavior is essential for identifying anomalies",
+      ],
+      link: "./labs/reports/Assignment 2 week 2.pdf",
+      date: "January 2026",
       category: "HackTheBox",
     },
     {
-      title: "Starting Point - Fawn",
-      problemStatement: "Fawn is another beginner machine focusing on FTP service exploitation. The challenge involves accessing an FTP server and retrieving sensitive information.",
-      approach: "Performed port scanning and identified FTP service on port 21. Attempted anonymous FTP login which was successful. Explored the FTP directory structure and found a flag file. Downloaded the flag using FTP commands.",
-      tools: ["nmap", "FTP client", "Linux commands"],
-      screenshots: ["./labs/htb-fawn-1.png"],
-      lessons: [
-        "Anonymous FTP access is a common misconfiguration",
-        "Always check for anonymous access on FTP services",
-        "Proper FTP security configuration is essential",
+      title: "Web Requests",
+      problemStatement:
+        "Analyze and manipulate web requests to understand how client-server communication operates and identify potential security weaknesses in web applications.",
+      approach:
+        "Completed practical modules exploring HTTP methods, headers, status codes, and request/response structures. Intercepted and modified web traffic to examine how data is transmitted between clients and servers. Analyzed authentication mechanisms, cookies, and session handling to understand web security fundamentals. Tested parameter manipulation and observed server responses to identify potential vulnerabilities. Documented findings and reinforced understanding of web communication protocols.",
+      tools: [
+        "Burp Suite",
+        "Browser Developer Tools",
+        "HTTP/HTTPS Protocols",
+        "HTB Academy Lab Environment",
       ],
-      link: "#",
-      date: "January 2024",
+      screenshots: ["./labs/htb-web-requests-1.png"],
+      lessons: [
+        "Understanding HTTP is fundamental to web security testing",
+        "Interception tools reveal hidden request and response details",
+        "Session management plays a critical role in application security",
+        "Manipulating requests helps identify potential vulnerabilities",
+      ],
+      link: "./labs/reports/Assignment 2 week 3.pdf",
+      date: "January 2026",
       category: "HackTheBox",
     },
   ];
 
+  {
+    /* TryHackMe Labs */
+  }
   const tryHackMeLabs = [
     {
-      title: "Basic Pentesting",
-      problemStatement: "A vulnerable machine designed to practice basic penetration testing techniques including enumeration, exploitation, and privilege escalation.",
-      approach: "Started with network scanning to identify the target. Enumerated HTTP services and discovered a web application. Found a vulnerable login page and used brute force techniques. Gained initial access through SSH with discovered credentials. Performed privilege escalation using sudo misconfigurations.",
-      tools: ["nmap", "gobuster", "hydra", "SSH", "Linux enumeration"],
-      screenshots: ["./labs/thm-basic-1.png", "./labs/thm-basic-2.png"],
-      lessons: [
-        "Enumeration is key to successful penetration testing",
-        "Weak passwords are still a common vulnerability",
-        "Sudo misconfigurations can lead to privilege escalation",
-        "Always document findings during penetration testing",
+      title: "DNS In Detail",
+      problemStatement:
+        "Explore the Domain Name System (DNS) in depth to understand its structure, record types, resolution process, and associated security risks.",
+      approach:
+        "Completed hands-on labs analyzing DNS queries, responses, and record types including A, AAAA, MX, CNAME, and TXT. Used command-line tools to perform DNS lookups and trace resolution paths. Investigated how recursive and authoritative DNS servers interact during name resolution. Examined common DNS-related attacks such as cache poisoning and DNS tunneling. Documented findings to strengthen understanding of DNS operations and security implications.",
+      tools: [
+        "TryHackMe Lab Environment",
+        "nslookup",
+        "dig",
+        "Wireshark",
+        "DNS Protocol Analysis",
       ],
-      link: "#",
-      date: "February 2024",
+      screenshots: ["./labs/thm-dns-in-detail-1.png"],
+      lessons: [
+        "DNS is a critical foundation of internet communication",
+        "Understanding record types improves troubleshooting accuracy",
+        "DNS misconfigurations can introduce serious security risks",
+        "Traffic analysis helps detect DNS-based attacks",
+      ],
+      link: "./labs/reports/Assignment 1 Week 3.pdf",
+      date: "January 2026",
       category: "TryHackMe",
     },
     {
       title: "OWASP Top 10",
-      problemStatement: "A comprehensive lab covering the OWASP Top 10 vulnerabilities including SQL injection, XSS, CSRF, and more.",
-      approach: "Systematically worked through each OWASP Top 10 vulnerability. Started with SQL injection testing using manual techniques and SQLMap. Tested for XSS vulnerabilities using various payloads. Explored authentication bypass techniques. Practiced file upload vulnerabilities and command injection.",
+      problemStatement:
+        "A comprehensive lab covering the OWASP Top 10 vulnerabilities including SQL injection, XSS, CSRF, and more.",
+      approach:
+        "Systematically worked through each OWASP Top 10 vulnerability. Started with SQL injection testing using manual techniques and SQLMap. Tested for XSS vulnerabilities using various payloads. Explored authentication bypass techniques. Practiced file upload vulnerabilities and command injection.",
       tools: ["Burp Suite", "SQLMap", "OWASP ZAP", "Browser DevTools"],
       screenshots: ["./labs/thm-owasp-1.png"],
       lessons: [
@@ -202,37 +263,118 @@ const LabChallenges = () => {
     },
   ];
 
+  {
+    /* Packet Tracer Labs */
+  }
   const packetTracerLabs = [
     {
-      title: "Network Security Configuration",
-      problemStatement: "Design and implement a secure network topology using Cisco Packet Tracer, including firewall rules, VLAN segmentation, and access control lists.",
-      approach: "Created a multi-VLAN network topology with separate segments for different departments. Configured inter-VLAN routing using a router-on-a-stick. Implemented ACLs to control traffic between VLANs. Configured firewall rules to block unauthorized access. Set up NAT for internet connectivity while maintaining security.",
-      tools: ["Cisco Packet Tracer", "Cisco IOS commands"],
-      screenshots: ["./labs/pt-network-1.png", "./labs/pt-network-2.png"],
-      lessons: [
-        "Network segmentation improves security posture",
-        "ACLs are essential for traffic control",
-        "Proper VLAN configuration prevents lateral movement",
-        "Documentation is crucial for network management",
+      title: "Examine TCP/IP and OSI Models in Action",
+      problemStatement:
+        "Analyze and demonstrate how data flows through the TCP/IP and OSI models using Cisco Packet Tracer, identifying the role of each layer during network communication.",
+      approach:
+        "Designed a simple network topology with end devices, switches, and routers. Generated traffic between hosts to observe encapsulation and de-encapsulation processes. Used simulation mode in Packet Tracer to inspect PDUs at each layer. Analyzed how protocols operate within both the OSI and TCP/IP models. Documented findings to correlate theoretical concepts with practical implementation.",
+      tools: [
+        "Cisco Packet Tracer",
+        "TCP/IP Protocol Suite",
+        "OSI Model Analysis",
       ],
-      link: "#",
-      date: "April 2024",
+      screenshots: ["./labs/pt-osi-tcpip-1.png"],
+      lessons: [
+        "Each OSI and TCP/IP layer performs a specific function in data transmission",
+        "Encapsulation and de-encapsulation occur at every layer during communication",
+        "Simulation tools help visualize abstract networking concepts",
+        "Understanding protocol layering improves troubleshooting skills",
+      ],
+      link: "./labs/reports/Assignment 1 week 1.pdf",
+      date: "January 2026",
       category: "Packet Tracer",
     },
     {
-      title: "VPN Configuration Lab",
-      problemStatement: "Configure site-to-site VPN connections between multiple branch offices using Packet Tracer, ensuring secure communication channels.",
-      approach: "Designed a network topology with multiple branch offices. Configured IPsec VPN tunnels between sites. Implemented encryption and authentication protocols. Tested connectivity and verified secure communication. Documented the configuration for future reference.",
-      tools: ["Cisco Packet Tracer", "IPsec", "Cisco IOS"],
-      screenshots: ["./labs/pt-vpn-1.png"],
-      lessons: [
-        "VPNs provide secure communication over untrusted networks",
-        "Proper key management is critical for VPN security",
-        "Testing is essential after VPN configuration",
-        "Understanding encryption protocols is important",
+      title: "Use Wireshark to Examine Network Traffic",
+      problemStatement:
+        "Capture and analyze network traffic using Wireshark to identify protocols, inspect packet structures, and understand communication patterns between devices.",
+      approach:
+        "Installed and configured Wireshark to capture live network traffic. Generated different types of traffic including HTTP, DNS, and ICMP. Applied display filters to isolate specific protocols and sessions. Examined packet details to analyze headers, flags, and payload information. Documented findings to correlate observed traffic with networking theory.",
+      tools: [
+        "Wireshark",
+        "TCP/IP Protocol Suite",
+        "Network Interface Analyzer",
       ],
-      link: "#",
-      date: "May 2024",
+      screenshots: ["./labs/wireshark-analysis-1.png"],
+      lessons: [
+        "Packet analysis reveals how protocols operate in real time",
+        "Filtering is essential for efficient traffic investigation",
+        "Understanding TCP flags aids in troubleshooting connectivity issues",
+        "Network monitoring is critical for security and performance analysis",
+      ],
+      link: "./labs/reports/Assignment 2 week 1.pdf",
+      date: "January 2026",
+      category: "Wireshark",
+    },
+    {
+      title: "Build a Switch and Router Network",
+      problemStatement:
+        "Design and configure a functional network using switches and routers to enable inter-VLAN communication and ensure reliable end-to-end connectivity.",
+      approach:
+        "Designed a small enterprise topology with multiple VLANs connected through a Layer 2 switch and a router. Configured VLANs, trunk links, and router-on-a-stick for inter-VLAN routing. Assigned IP addressing to all interfaces and end devices. Verified connectivity using ping and troubleshooting commands. Documented configurations and validated proper data flow across the network.",
+      tools: [
+        "Cisco Packet Tracer",
+        "Cisco IOS",
+        "VLAN Configuration",
+        "Router-on-a-Stick",
+      ],
+      screenshots: ["./labs/switch-router-network-1.png"],
+      lessons: [
+        "VLAN segmentation improves network organization and security",
+        "Trunk links are essential for inter-VLAN communication",
+        "Router-on-a-stick enables routing between multiple VLANs",
+        "Systematic testing ensures reliable network deployment",
+      ],
+      link: "./labs/reports/Assignment 1 week 2.pdf",
+      date: "January 2026",
+      category: "Packet Tracer",
+    },
+    {
+      title: "VLANs and Secure Switch Configuration",
+      problemStatement:
+        "Configure VLAN segmentation and implement Layer 2 security features on a switch to enhance network isolation, control access, and mitigate common switching attacks.",
+      approach:
+        "Designed a segmented network using multiple VLANs to separate departments and improve traffic management. Configured access and trunk ports, assigned VLAN memberships, and implemented inter-VLAN routing where required. Applied switch security features including port security, DHCP snooping, and BPDU Guard to prevent unauthorized access and Layer 2 attacks. Verified configuration using show commands and connectivity tests. Documented all configurations and security measures for validation and future reference.",
+      tools: ["Cisco Packet Tracer"],
+      screenshots: ["./labs/vlan-secure-switch-1.png"],
+      lessons: [
+        "VLANs enhance both performance and security through logical segmentation",
+        "Port security restricts unauthorized device access",
+        "DHCP snooping helps prevent rogue DHCP attacks",
+        "Layer 2 security features are critical in protecting switched networks",
+      ],
+      link: "./labs/reports/Assignment 1 week 4.pdf",
+      date: "January 2026",
+      category: "Packet Tracer",
+    },
+    {
+      title: "Packet Tracer WLAN Configuration",
+      problemStatement:
+        "Configure secure wireless LAN environments in Packet Tracer, implementing both WPA2-Personal and WPA2-Enterprise authentication to ensure protected wireless communication.",
+      approach:
+        "Configured a home wireless router with DHCP services and WPA2-PSK security for secure client connectivity. Deployed and configured a Wireless LAN Controller (WLC) with multiple VLAN interfaces. Created and mapped WLANs to respective VLANs, implementing both WPA2-PSK and WPA2-Enterprise authentication using a RADIUS server. Enabled FlexConnect settings and verified client association, IP assignment, and end-to-end connectivity. Documented configuration steps and validated secure communication across the network.",
+      tools: [
+        "Cisco Packet Tracer",
+        "Wireless LAN Controller (WLC)",
+        "WPA2-PSK",
+        "WPA2-Enterprise",
+        "RADIUS Server",
+        "FlexConnect",
+      ],
+      screenshots: ["./labs/pt-wlan-config-1.png"],
+      lessons: [
+        "WPA2-Enterprise provides stronger authentication through centralized RADIUS validation",
+        "Proper VLAN mapping is essential for WLAN segmentation",
+        "DHCP configuration ensures seamless wireless client connectivity",
+        "Wireless security configuration requires both encryption and authentication controls",
+      ],
+      link: "./labs/reports/Assignment 2 week 4.pdf",
+      date: "January 2026",
       category: "Packet Tracer",
     },
   ];
@@ -246,25 +388,18 @@ const LabChallenges = () => {
           className="!text-5xl text-center mb-4 xl:!text-4xl md:!text-3xl sm:!text-2xl"
         />
         <p className="text-center text-lg text-gray-600 dark:text-gray-400 mb-16 max-w-3xl mx-auto">
-          Explore my journey through various cybersecurity challenges, including penetration testing labs,
-          network security configurations, and hands-on exercises. Each writeup includes problem statements,
+          Explore my journey through various cybersecurity challenges, including
+          penetration testing labs, network security configurations, and
+          hands-on exercises. Each writeup includes problem statements,
           methodologies, tools used, and key lessons learned.
         </p>
 
-        <LabSection
-          title="HackTheBox Labs"
-          labs={hackTheBoxLabs}
-          icon="🔓"
-        />
+        <LabSection title="HackTheBox Labs" labs={hackTheBoxLabs} icon="🔓" />
+
+        <LabSection title="TryHackMe Labs" labs={tryHackMeLabs} icon="🎯" />
 
         <LabSection
-          title="TryHackMe Labs"
-          labs={tryHackMeLabs}
-          icon="🎯"
-        />
-
-        <LabSection
-          title="Packet Tracer Labs"
+          title="Packet Tracer and Other Tools Labs"
           labs={packetTracerLabs}
           icon="🌐"
         />

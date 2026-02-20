@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import AnimatedText from "../animations/AnimatedText";
 import Layout from "../layout/Layout";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
-import Skills from "./Skills";
+//import Skills from "./Skills";
 //import Experiene from "../experience/Experiene";
 //import Education from "../education/Education";
 //import Article from "../Article/Article";
@@ -114,7 +114,6 @@ const About = () => {
               </div>
             </div>
           </div>
-          <Skills />
         </Layout>
       </div>
     </>

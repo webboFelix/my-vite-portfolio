@@ -1,8 +1,9 @@
 import React, { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import LiIcon from "./LiIcon";
-import Home from "../home/Home";
+//import Home from "../home/Home";
 import Layout from "../layout/Layout";
+import Skills from "../about/Skills";
 
 const Details = ({ position, company, compoanyLink, time, address, work }) => {
   const ref = useRef(null);
@@ -40,7 +41,6 @@ const Experiene = () => {
 
   return (
     <>
-      <Home />
       <div className="my-0 dark:bg-black dark:text-white">
         <h2 className="font-bold dark:text-white text-4xl mb-2 w-full text-center md:text-3xl xs:text-2xl md:mb-2 capitalize">
           experience.
@@ -109,6 +109,7 @@ const Experiene = () => {
             />
           </ul>
         </div>
+        <Skills />
         <Layout>
           <h3 className="text-center text-3xl mt-16 capitalize font-bold underline">
             other experience.

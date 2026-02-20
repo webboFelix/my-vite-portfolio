@@ -8,10 +8,9 @@ import useThemeSwitcher from "../hook/useThemeSwitcher";
 
 const navLinks = [
   { to: "/", title: "Home" },
-  { to: "/about", title: "About" },
-  { to: "/education", title: "Education" },
-  { to: "/experience", title: "Experience" },
-  { to: "/certifications", title: "Certifications" },
+
+  { to: "/resume", title: "Resume" },
+
   { to: "/project", title: "Projects" },
   { to: "/labs", title: "Labs" },
   { to: "/contact", title: "Contact" },
@@ -24,7 +23,9 @@ const CustomLink = ({ to, title, className = "" }) => {
     <Link
       to={to}
       className={`${className} relative group text-sm xl:text-base font-medium transition-colors ${
-        isActive ? "text-cyan-500 dark:text-cyan-400 font-bold" : "text-black dark:text-white"
+        isActive
+          ? "text-cyan-500 dark:text-cyan-400 font-bold"
+          : "text-black dark:text-white"
       } hover:text-cyan-500 dark:hover:text-cyan-400`}
     >
       {title}
@@ -62,7 +63,9 @@ const CustomMobileLink = ({ to, title, toggle }) => {
       {title}
       <span
         className={`h-[2px] inline-block bg-cyan-400 dark:bg-cyan-600 absolute left-4 right-4 bottom-2 transition-[width] ease duration-300 ${
-          isActive ? "w-[calc(100%-2rem)]" : "w-0 group-hover:w-[calc(100%-2rem)]"
+          isActive
+            ? "w-[calc(100%-2rem)]"
+            : "w-0 group-hover:w-[calc(100%-2rem)]"
         }`}
       />
     </button>
@@ -135,6 +138,16 @@ const Navbar = () => {
         </button>
       </div>
 
+      <div className="flex items-center md:hidden justify-center">
+        <Link to="/">
+          <img
+            src="./profileImg1.png"
+            alt="profile"
+            className="w-10 h-10 rounded-full object-cover hover:scale-105 transition-all duration-300"
+          />
+        </Link>
+      </div>
+
       {/* Center: Desktop nav links (hidden on lg and below) */}
       <nav className="flex lg:hidden items-center justify-center flex-wrap gap-x-1 gap-y-1 xl:gap-x-3 2xl:gap-x-4 max-w-4xl mx-auto">
         {navLinks.map(({ to, title }) => (
@@ -176,18 +189,36 @@ const Navbar = () => {
             whileTap={{ scale: 0.9 }}
             className="w-6 h-6 flex items-center justify-center"
           >
-            <img src="./icons8-fb.gif" alt="" className="w-6 h-6 object-contain" />
+            <img
+              src="./icons8-fb.gif"
+              alt=""
+              className="w-6 h-6 object-contain"
+            />
           </motion.a>
           <button
             type="button"
             onClick={() => setMode(mode === "light" ? "dark" : "light")}
-            aria-label={mode === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+            aria-label={
+              mode === "dark" ? "Switch to light mode" : "Switch to dark mode"
+            }
             className="flex items-center justify-center rounded-full p-1.5 hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
           >
             {mode === "dark" ? (
-              <img src="./light-bg-r.svg" alt="" width={28} height={28} className="xl:w-8 xl:h-8" />
+              <img
+                src="./light-bg-r.svg"
+                alt=""
+                width={28}
+                height={28}
+                className="xl:w-8 xl:h-8"
+              />
             ) : (
-              <img src="./dark-bg-r1.svg" alt="" width={28} height={28} className="xl:w-8 xl:h-8" />
+              <img
+                src="./dark-bg-r1.svg"
+                alt=""
+                width={28}
+                height={28}
+                className="xl:w-8 xl:h-8"
+              />
             )}
           </button>
         </nav>
@@ -236,7 +267,12 @@ const Navbar = () => {
           >
             <nav className="flex flex-col w-full max-w-sm gap-1">
               {navLinks.map(({ to, title }) => (
-                <CustomMobileLink key={to} to={to} title={title} toggle={handleClick} />
+                <CustomMobileLink
+                  key={to}
+                  to={to}
+                  title={title}
+                  toggle={handleClick}
+                />
               ))}
             </nav>
             <div className="w-16 h-px bg-white/30 dark:bg-black/30 my-6" />
@@ -272,7 +308,11 @@ const Navbar = () => {
                 whileTap={{ scale: 0.95 }}
                 className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 dark:bg-black/10"
               >
-                <img src="./icons8-fb.gif" alt="" className="w-5 h-5 object-contain" />
+                <img
+                  src="./icons8-fb.gif"
+                  alt=""
+                  className="w-5 h-5 object-contain"
+                />
               </motion.a>
               <motion.button
                 type="button"

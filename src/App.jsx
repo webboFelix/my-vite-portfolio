@@ -10,8 +10,9 @@ import Footer from "./components/footer/Footer";
 import Article from "./components/Article/Article";
 import Certs from "./components/certs/Certs";
 //import Education from "./components/education/Education";
-import Edu from "./components/showEducation/Edu";
+//import Edu from "./components/showEducation/Edu";
 import LabChallenges from "./components/labs/LabChallenges";
+import Resume from "./components/resume/Resume";
 
 function App() {
   const location = useLocation(); // Get the current location
@@ -26,7 +27,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/experience" element={<Experiene />} />
           <Route path="/certifications" element={<Certs />} />
-          <Route path="/education" element={<Edu />} />
+          <Route path="/resume" element={<Resume />} />
           <Route path="/project" element={<Article />} />
           <Route path="/labs" element={<LabChallenges />} />
         </Routes>

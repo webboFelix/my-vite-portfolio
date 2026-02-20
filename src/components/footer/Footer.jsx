@@ -4,7 +4,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { LinkedIn } from "../icons/Linkin";
 import { GithubIcon } from "../icons/Github";
 import Layout from "../layout/Layout";
-import { BsArrowUpCircle, BsEnvelope, BsPhone, BsGeoAlt, BsCalendarCheck } from "react-icons/bs";
+import {
+  BsArrowUpCircle,
+  BsEnvelope,
+  BsPhone,
+  BsGeoAlt,
+  BsCalendarCheck,
+} from "react-icons/bs";
 
 const Footer = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -45,7 +51,7 @@ const Footer = () => {
   const navLinks = [
     { to: "/", title: "Home" },
     { to: "/about", title: "About" },
-    { to: "/education", title: "Education" },
+    { to: "/resume", title: "Resume" },
     { to: "/experience", title: "Experience" },
     { to: "/certifications", title: "Certifications" },
     { to: "/project", title: "Projects" },
@@ -95,7 +101,7 @@ const Footer = () => {
         )}
       </AnimatePresence>
 
-      <footer className="relative w-full overflow-x-hidden bg-gradient-to-b from-white via-gray-50 to-gray-100 dark:from-black dark:via-gray-900 dark:to-black border-t border-gray-200 dark:border-gray-800">
+      <footer className="relative w-full overflow-x-hidden bg-gradient-to-br from-slate-900 via-slate-950 to-black border-t border-slate-800/90">
         <Layout className="pt-12 sm:pt-16 md:pt-20 pb-8">
           <motion.div
             variants={footerVariants}
@@ -107,7 +113,10 @@ const Footer = () => {
             {/* Top Section - Brand & Quick Info */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-12">
               {/* Brand Section */}
-              <motion.div variants={itemVariants} className="flex flex-col items-center md:items-start">
+              <motion.div
+                variants={itemVariants}
+                className="flex flex-col items-center md:items-start"
+              >
                 <div className="flex items-center gap-4 mb-4">
                   <motion.img
                     src="./profileImg1.png"
@@ -120,17 +129,23 @@ const Footer = () => {
                     <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
                       Felix Webbo
                     </h2>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">Cloud & Application Security Specialist</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      Cloud & Application Security Specialist
+                    </p>
                   </div>
                 </div>
                 <p className="text-gray-700 dark:text-gray-300 text-center md:text-left text-sm sm:text-base leading-relaxed">
-                  Building secure digital infrastructures through offensive and defensive security strategies.
-                  Always learning, always securing.
+                  Building secure digital infrastructures through offensive and
+                  defensive security strategies. Always learning, always
+                  securing.
                 </p>
               </motion.div>
 
               {/* Quick Links */}
-              <motion.div variants={itemVariants} className="flex flex-col items-center md:items-start">
+              <motion.div
+                variants={itemVariants}
+                className="flex flex-col items-center md:items-start"
+              >
                 <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-900 dark:text-white">
                   Quick Links
                 </h3>
@@ -159,7 +174,10 @@ const Footer = () => {
               </motion.div>
 
               {/* Contact & Social */}
-              <motion.div variants={itemVariants} className="flex flex-col items-center md:items-start">
+              <motion.div
+                variants={itemVariants}
+                className="flex flex-col items-center md:items-start"
+              >
                 <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-900 dark:text-white">
                   Get In Touch
                 </h3>
@@ -172,7 +190,9 @@ const Footer = () => {
                     <div className="p-2 bg-cyan-100 dark:bg-cyan-900/30 rounded-lg group-hover:bg-cyan-200 dark:group-hover:bg-cyan-900/50 transition-colors">
                       <BsEnvelope className="w-5 h-5 text-cyan-600 dark:text-cyan-400" />
                     </div>
-                    <span className="text-sm sm:text-base">felixwebbo.fw@gmail.com</span>
+                    <span className="text-sm sm:text-base">
+                      felixwebbo.fw@gmail.com
+                    </span>
                   </motion.a>
 
                   <motion.a
@@ -183,7 +203,9 @@ const Footer = () => {
                     <div className="p-2 bg-green-100 dark:bg-green-900/30 rounded-lg group-hover:bg-green-200 dark:group-hover:bg-green-900/50 transition-colors">
                       <BsPhone className="w-5 h-5 text-green-600 dark:text-green-400" />
                     </div>
-                    <span className="text-sm sm:text-base">+254 113 323746</span>
+                    <span className="text-sm sm:text-base">
+                      +254 113 323746
+                    </span>
                   </motion.a>
 
                   <motion.div
@@ -203,7 +225,9 @@ const Footer = () => {
                     <div className="p-2 bg-orange-100 dark:bg-orange-900/30 rounded-lg">
                       <BsCalendarCheck className="w-5 h-5 text-orange-600 dark:text-orange-400" />
                     </div>
-                    <span className="text-sm sm:text-base">Available for opportunities</span>
+                    <span className="text-sm sm:text-base">
+                      Available for opportunities
+                    </span>
                   </motion.div>
                 </div>
 
@@ -251,7 +275,10 @@ const Footer = () => {
               className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-600 dark:text-gray-400"
             >
               <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
-                <span>&copy; {new Date().getFullYear()} Felix Webbo. All rights reserved.</span>
+                <span>
+                  &copy; {new Date().getFullYear()} Felix Webbo. All rights
+                  reserved.
+                </span>
                 <span className="hidden sm:inline">·</span>
                 <span>Built with React & Tailwind CSS</span>
               </div>
