@@ -3,7 +3,35 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
+html {
+  font-family: "Montserrat", sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
-  font-family: "montserrat", sans-serif;
+  @apply antialiased text-black dark:text-white bg-white dark:bg-black/90;
+  overflow-x: hidden;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+/* Improve touch targets for nav and key actions (optional) */
+@media (pointer: coarse) {
+  header button[aria-label],
+  header a[aria-label],
+  .min-h-\[44px\] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Smooth scroll with offset for fixed navbar */
+html {
+  scroll-padding-top: 5rem;
+}
+@media (max-width: 1023px) {
+  html {
+    scroll-padding-top: 4rem;
+  }
 }

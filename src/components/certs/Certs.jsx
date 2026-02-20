@@ -55,7 +55,7 @@ const Art = ({ img, title, date, link }) => {
 
 const Certs = () => {
   return (
-    <Layout className="pt-16">
+    <Layout className="pt-20 sm:pt-24 md:pt-28 lg:pt-32">
       <h2 className="font-bold text-4xl w-full text-center my-16 mt-32">
         My Certifications
       </h2>

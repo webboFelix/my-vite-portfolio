@@ -11,12 +11,13 @@ import Article from "./components/Article/Article";
 import Certs from "./components/certs/Certs";
 //import Education from "./components/education/Education";
 import Edu from "./components/showEducation/Edu";
+import LabChallenges from "./components/labs/LabChallenges";
 
 function App() {
   const location = useLocation(); // Get the current location
 
   return (
-    <div className="font-mont bg-white w-full min-h-screen dark:bg-black/90">
+    <div className="font-mont bg-white dark:bg-black/90 w-full min-h-screen min-h-dvh overflow-x-hidden">
       <Navbar />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.key}>
@@ -27,6 +28,7 @@ function App() {
           <Route path="/certifications" element={<Certs />} />
           <Route path="/education" element={<Edu />} />
           <Route path="/project" element={<Article />} />
+          <Route path="/labs" element={<LabChallenges />} />
         </Routes>
         <Footer />
       </AnimatePresence>

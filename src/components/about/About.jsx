@@ -36,7 +36,7 @@ const About = () => {
     <>
       <Transition />
       <div className="flex w-full flex-col items-center justify-center">
-        <Layout className="pt-32">
+        <Layout className="pt-20 sm:pt-24 md:pt-28 lg:pt-32">
           <AnimatedText
             text="Architecting Secure Cloud & Application Systems for a Resilient Digital Future."
             className="mb-16 lg:pt-16 lg:!text-4xl sm:!text-2xl xs:!text-xl sm:mb-8"

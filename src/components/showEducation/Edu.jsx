@@ -8,7 +8,7 @@ function Edu() {
     <>
       <Transition />
       <div>
-        <Layout className="pt-0 md:pt-16 sm:pt-8">
+        <Layout className="pt-14 sm:pt-16 md:pt-20 lg:pt-24">
           <Education />
         </Layout>
       </div>

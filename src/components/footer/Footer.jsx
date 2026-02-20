@@ -1,273 +1,290 @@
-import React, { useState } from "react";
-import PhoneInTalkIcon from "@mui/icons-material/PhoneInTalk";
-import MailIcon from "@mui/icons-material/Mail";
-//import { FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 import { LinkedIn } from "../icons/Linkin";
 import { GithubIcon } from "../icons/Github";
 import Layout from "../layout/Layout";
-import { TwitterIcon } from "../icons/Icons";
-
-const iconVariants = (duration) => ({
-  initial: { y: -20 },
-  animate: {
-    y: [20, -20],
-    transition: {
-      duration: duration,
-      ease: "linear",
-      repeat: Infinity,
-      repeatType: "reverse",
-    },
-  },
-});
-
-const iconVariants2 = {
-  initial: { rotate: 0 },
-  animate: {
-    rotate: 360,
-    transition: {
-      duration: 2, // Adjust the duration as needed
-      repeat: Infinity,
-      ease: "linear",
-    },
-  },
-};
+import { BsArrowUpCircle, BsEnvelope, BsPhone, BsGeoAlt, BsCalendarCheck } from "react-icons/bs";
 
 const Footer = () => {
-  const [tooltip, setTooltip] = useState("");
+  const [showScrollTop, setShowScrollTop] = useState(false);
+  const location = useLocation();
 
-  const handleMouseEnter = (name) => {
-    setTooltip(name);
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 400);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const handleMouseLeave = () => {
-    setTooltip("");
+  const footerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
   };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 },
+    },
+  };
+
+  const navLinks = [
+    { to: "/", title: "Home" },
+    { to: "/about", title: "About" },
+    { to: "/education", title: "Education" },
+    { to: "/experience", title: "Experience" },
+    { to: "/certifications", title: "Certifications" },
+    { to: "/project", title: "Projects" },
+    { to: "/labs", title: "Labs" },
+    { to: "/contact", title: "Contact" },
+  ];
+
+  const socialLinks = [
+    {
+      name: "GitHub",
+      url: "https://github.com/webboFelix",
+      icon: GithubIcon,
+      color: "hover:text-gray-800 dark:hover:text-white",
+    },
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/felix-webbo-b4b177235/",
+      icon: LinkedIn,
+      color: "hover:text-blue-600 dark:hover:text-blue-400",
+    },
+    {
+      name: "Facebook",
+      url: "https://www.facebook.com/felaferer",
+      icon: null,
+      image: "./icons8-fb.gif",
+      color: "hover:text-blue-500 dark:hover:text-blue-400",
+    },
+  ];
 
   return (
-    <footer className="flex  items-center text-black dark:text-white w-full h-max">
-      <Layout className="pt-0 md:pt-16 sm:pt-8 bg-gradient-to-b from-black/30 via-black/50 to-black/90">
-        <div className="flex mx-5 justify-between items-center sm:flex-col">
-          <img
-            src="./profileImg1.png"
-            className="w-32 h-32 rounded-full flex-shrink-0 border-4 border-solid-cyan-900"
-            alt="footerImage"
-          />
-          <motion.div className="flex flex-col my-5">
-            <motion.div className="flex space-x-2">
-              {" "}
-              <motion.pre
-                variants={iconVariants2}
-                initial="initial"
-                animate="animate"
-                className="h-5 w-5 bg-blue-100"
-              ></motion.pre>
-              <motion.pre
-                variants={iconVariants(1)}
-                initial="initial"
-                animate="animate"
-                whileHover={{ rotateY: 180 }}
-                className="h-5 w-5 bg-blue-900"
-              ></motion.pre>
-              <motion.pre
-                variants={iconVariants2}
-                initial="initial"
-                animate="animate"
-                className="h-5 w-5 bg-blue-100"
-              ></motion.pre>
-              <motion.pre
-                variants={iconVariants(2)}
-                initial="initial"
-                animate="animate"
-                whileHover={{ rotateY: 180 }}
-                className="h-5 w-5 bg-blue-900"
-              ></motion.pre>
-              <motion.pre
-                variants={iconVariants2}
-                initial="initial"
-                animate="animate"
-                className="h-5 w-5 bg-blue-100"
-              ></motion.pre>
-              <motion.pre
-                variants={iconVariants(3)}
-                initial="initial"
-                animate="animate"
-                whileHover={{ rotateY: 180 }}
-                className="h-5 w-5 bg-blue-900"
-              ></motion.pre>
-            </motion.div>
-            <div className="flex space-x-2">
-              {" "}
-              <pre className="h-5 w-5 bg-blue-900"></pre>
-              <pre className="h-5 w-5 bg-blue-50 transform rotate-45"></pre>
-              <pre className="h-5 w-5 bg-blue-600"></pre>
-              <pre className="h-5 w-5 bg-blue-400 transform rotate-45"></pre>
-              <pre className="h-5 w-5 bg-blue-900"></pre>
-              <pre className="h-5 w-5 bg-blue-100 transform rotate-45"></pre>
-            </div>
-          </motion.div>
-          <div className="text-center sm:text-left">
-            <h1>
-              <a
-                href="#"
-                className="text-bold bg-gradient-to-r from-blue-500 via-slate-500 to-purple-500 bg-clip-text tracking-wide text-transparent"
-              >
-                FELIX WEBBO.
-              </a>
-            </h1>
-            <h4>Cloud and Application Security Specialist.</h4>
-            <h4>Penetration Tester</h4>
-          </div>
-        </div>
-        <hr className="w-full h-5 my-4" />
+    <>
+      {/* Scroll to Top Button */}
+      <AnimatePresence>
+        {showScrollTop && (
+          <motion.button
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0 }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={scrollToTop}
+            className="fixed bottom-8 right-6 sm:right-8 z-50 bg-gradient-to-r from-cyan-500 to-purple-500 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-shadow duration-300"
+            aria-label="Scroll to top"
+          >
+            <BsArrowUpCircle className="w-6 h-6 sm:w-7 sm:h-7" />
+          </motion.button>
+        )}
+      </AnimatePresence>
 
-        {/**middle part */}
-        <div className="flex justify-center items-start">
-          <div className="grid w-full grid-cols-8 gap-16 mx-10 sm:gap-8">
-            <div className="col-span-3 flex flex-col items-start justify-start md:col-span-4 sm:col-span-8 sm:items-center">
-              <h2 className="text-2xl text-blue-900 underline">Contents.</h2>
-              <ul className="permalinks space-y-2 flex flex-col md:items-center">
-                <li className="hover:translate-x-2 transition-transform duration-200">
-                  <Link to="/" className="hover:text-blue-500">
-                    Home
-                  </Link>
-                </li>
-                <li className="hover:translate-x-2 transition-transform duration-200">
-                  <Link to="/about" className="hover:text-blue-500">
-                    About
-                  </Link>
-                </li>
-                <li className="hover:translate-x-2 transition-transform duration-200">
-                  <Link to="/experience" className="hover:text-blue-500">
-                    Experience
-                  </Link>
-                </li>
-
-                <li className="hover:translate-x-2 transition-transform duration-200">
-                  <Link to="/contact" className="hover:text-blue-500">
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-              <div className="w-full h-2 bg-black/5 hidden sm:flex dark:bg-white/20" />
-            </div>
-
-            <div className="col-span-3 relative h-max w-max  md:col-span-4 flex flex-col ">
-              <h2 className="text-2xl  underline text-blue-900">
-                Contact Info:
-              </h2>
-              <a href={`tel:${+254113323746}`}>
-                {" "}
-                <span className="flex gap-2 items-center mt-2">
-                  <img
-                    src="./gif-phone.gif"
-                    alt="Gmail"
-                    width={20}
-                    className="rounded-sm"
+      <footer className="relative w-full overflow-x-hidden bg-gradient-to-b from-white via-gray-50 to-gray-100 dark:from-black dark:via-gray-900 dark:to-black border-t border-gray-200 dark:border-gray-800">
+        <Layout className="pt-12 sm:pt-16 md:pt-20 pb-8">
+          <motion.div
+            variants={footerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="w-full"
+          >
+            {/* Top Section - Brand & Quick Info */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-12">
+              {/* Brand Section */}
+              <motion.div variants={itemVariants} className="flex flex-col items-center md:items-start">
+                <div className="flex items-center gap-4 mb-4">
+                  <motion.img
+                    src="./profileImg1.png"
+                    alt="Felix Webbo"
+                    className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-cyan-500/30 dark:border-cyan-400/30 shadow-lg"
+                    whileHover={{ scale: 1.05, rotate: 5 }}
+                    transition={{ type: "spring", stiffness: 300 }}
                   />
-                  :<strong className="text-blue-500 p-2">Call Me</strong>
-                </span>
-              </a>
-
-              <br />
-              <span className="flex items-center">
-                <a href="mailto:felixwebbo.fw@gmail.com" className="flex gap-2">
-                  {" "}
-                  <img
-                    src="./gif-gmail-logo.gif"
-                    alt="Gmail"
-                    width={20}
-                    className="rounded-sm"
-                  />
-                  : Send Me An Email
-                </a>
-              </span>
-            </div>
-
-            {/* Footer social media section */}
-            <div className="col-span-2 h-[50%] xl:col-span-8 xl:flex-row xl:items-center flex flex-col items-end justify-between md:order-3">
-              <div className="flex flex-col items-start">
-                {" "}
-                <h2 className="text-2xl underline text-blue-900 mb-2">
-                  Follow Me:
-                </h2>
-                <div className="flex items-center justify-center gap-4 text-2xl cursor-pointer ">
-                  <div className="relative group">
-                    {tooltip === "Facebook" && (
-                      <div className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-sm p-1 rounded">
-                        Facebook
-                      </div>
-                    )}
-                    <a
-                      href="https://www.facebook.com/felaferer"
-                      className="hover:text-blue-500 hover:text-3xl transition-all duration-300"
-                      onMouseEnter={() => handleMouseEnter("Facebook")}
-                      onMouseLeave={handleMouseLeave}
-                    >
-                      <img
-                        src="./icons8-fb.gif"
-                        alt=""
-                        width={20}
-                        height={20}
-                      />
-                    </a>
-                  </div>
-
-                  <div className="relative group">
-                    {tooltip === "Twitter" && (
-                      <div className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-sm p-1 rounded">
-                        Github
-                      </div>
-                    )}
-                    <a
-                      href="https://github.com/webboFelix"
-                      className="hover:text-blue-500 hover:text-3xl transition-all duration-300"
-                      onMouseEnter={() => handleMouseEnter("Twitter")}
-                      onMouseLeave={handleMouseLeave}
-                    >
-                      <GithubIcon />
-                    </a>
-                  </div>
-
-                  <div className="relative group">
-                    {tooltip === "LinkedIn" && (
-                      <div className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-sm p-1 rounded">
-                        LinkedIn
-                      </div>
-                    )}
-                    <a
-                      href="https://www.linkedin.com/in/felix-webbo-b4b177235/"
-                      className="hover:text-blue-500 hover:text-3xl transition-all duration-300"
-                      onMouseEnter={() => handleMouseEnter("LinkedIn")}
-                      onMouseLeave={handleMouseLeave}
-                    >
-                      <LinkedIn />
-                    </a>
+                  <div>
+                    <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                      Felix Webbo
+                    </h2>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Cloud & Application Security Specialist</p>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
+                <p className="text-gray-700 dark:text-gray-300 text-center md:text-left text-sm sm:text-base leading-relaxed">
+                  Building secure digital infrastructures through offensive and defensive security strategies.
+                  Always learning, always securing.
+                </p>
+              </motion.div>
 
-        <div className="footer_copyright mt-4">
-          <marquee className="h-6 rounded-full bg-black/30">
-            <span>&copy;</span>
-            <small>
-              @webbo.developer/#/@webbo/ info: Phone :
-              <span className="text-green-800 text-lg"> +254 113 323746 </span>|{" "}
-              Email :
-              <span className="text-blue-600 text-lg">
-                {" "}
-                felixwebbo8@gmail.com
-              </span>
-              |{" "}
-            </small>
-          </marquee>
-        </div>
-      </Layout>
-    </footer>
+              {/* Quick Links */}
+              <motion.div variants={itemVariants} className="flex flex-col items-center md:items-start">
+                <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-900 dark:text-white">
+                  Quick Links
+                </h3>
+                <nav className="grid grid-cols-2 gap-2 w-full">
+                  {navLinks.map((link, index) => (
+                    <motion.div
+                      key={link.to}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.05 }}
+                    >
+                      <Link
+                        to={link.to}
+                        className={`block py-2 px-3 rounded-lg text-sm font-medium transition-all duration-300 ${
+                          location.pathname === link.to
+                            ? "text-cyan-500 dark:text-cyan-400 bg-cyan-50 dark:bg-cyan-900/20"
+                            : "text-gray-700 dark:text-gray-300 hover:text-cyan-500 dark:hover:text-cyan-400 hover:bg-gray-100 dark:hover:bg-gray-800"
+                        }`}
+                      >
+                        {link.title}
+                      </Link>
+                    </motion.div>
+                  ))}
+                </nav>
+              </motion.div>
+
+              {/* Contact & Social */}
+              <motion.div variants={itemVariants} className="flex flex-col items-center md:items-start">
+                <h3 className="text-xl sm:text-2xl font-bold mb-4 text-gray-900 dark:text-white">
+                  Get In Touch
+                </h3>
+                <div className="space-y-3 w-full">
+                  <motion.a
+                    href="mailto:felixwebbo.fw@gmail.com"
+                    className="flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors group"
+                    whileHover={{ x: 5 }}
+                  >
+                    <div className="p-2 bg-cyan-100 dark:bg-cyan-900/30 rounded-lg group-hover:bg-cyan-200 dark:group-hover:bg-cyan-900/50 transition-colors">
+                      <BsEnvelope className="w-5 h-5 text-cyan-600 dark:text-cyan-400" />
+                    </div>
+                    <span className="text-sm sm:text-base">felixwebbo.fw@gmail.com</span>
+                  </motion.a>
+
+                  <motion.a
+                    href="tel:+254113323746"
+                    className="flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors group"
+                    whileHover={{ x: 5 }}
+                  >
+                    <div className="p-2 bg-green-100 dark:bg-green-900/30 rounded-lg group-hover:bg-green-200 dark:group-hover:bg-green-900/50 transition-colors">
+                      <BsPhone className="w-5 h-5 text-green-600 dark:text-green-400" />
+                    </div>
+                    <span className="text-sm sm:text-base">+254 113 323746</span>
+                  </motion.a>
+
+                  <motion.div
+                    className="flex items-center gap-3 text-gray-700 dark:text-gray-300"
+                    whileHover={{ x: 5 }}
+                  >
+                    <div className="p-2 bg-purple-100 dark:bg-purple-900/30 rounded-lg">
+                      <BsGeoAlt className="w-5 h-5 text-purple-600 dark:text-purple-400" />
+                    </div>
+                    <span className="text-sm sm:text-base">Kenya</span>
+                  </motion.div>
+
+                  <motion.div
+                    className="flex items-center gap-3 text-gray-700 dark:text-gray-300"
+                    whileHover={{ x: 5 }}
+                  >
+                    <div className="p-2 bg-orange-100 dark:bg-orange-900/30 rounded-lg">
+                      <BsCalendarCheck className="w-5 h-5 text-orange-600 dark:text-orange-400" />
+                    </div>
+                    <span className="text-sm sm:text-base">Available for opportunities</span>
+                  </motion.div>
+                </div>
+
+                {/* Social Media */}
+                <div className="flex items-center gap-4 mt-6">
+                  {socialLinks.map((social, index) => (
+                    <motion.a
+                      key={social.name}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      initial={{ opacity: 0, scale: 0 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.1 }}
+                      whileHover={{ scale: 1.15, y: -5 }}
+                      whileTap={{ scale: 0.95 }}
+                      className={`p-3 bg-white dark:bg-gray-800 rounded-full shadow-md hover:shadow-lg transition-all duration-300 ${social.color}`}
+                      aria-label={social.name}
+                    >
+                      {social.icon ? (
+                        <social.icon className="w-5 h-5 sm:w-6 sm:h-6" />
+                      ) : (
+                        <img
+                          src={social.image}
+                          alt={social.name}
+                          className="w-5 h-5 sm:w-6 sm:h-6 object-contain"
+                        />
+                      )}
+                    </motion.a>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Divider */}
+            <motion.div
+              variants={itemVariants}
+              className="w-full h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-700 to-transparent my-8"
+            />
+
+            {/* Bottom Section - Copyright & Additional Info */}
+            <motion.div
+              variants={itemVariants}
+              className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-600 dark:text-gray-400"
+            >
+              <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+                <span>&copy; {new Date().getFullYear()} Felix Webbo. All rights reserved.</span>
+                <span className="hidden sm:inline">·</span>
+                <span>Built with React & Tailwind CSS</span>
+              </div>
+              <div className="flex items-center gap-4">
+                <a
+                  href="mailto:felixwebbo.fw@gmail.com"
+                  className="hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors"
+                >
+                  Email
+                </a>
+                <span>·</span>
+                <a
+                  href="tel:+254113323746"
+                  className="hover:text-green-600 dark:hover:text-green-400 transition-colors"
+                >
+                  Call
+                </a>
+                <span>·</span>
+                <Link
+                  to="/contact"
+                  className="hover:text-purple-500 dark:hover:text-purple-400 transition-colors"
+                >
+                  Contact Form
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Decorative Elements */}
+            <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-20" />
+          </motion.div>
+        </Layout>
+      </footer>
+    </>
   );
 };
 
